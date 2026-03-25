@@ -1,89 +1,259 @@
-# Next.js
+# 🚀 AHSE Tech — Landing Page & Sistema de Agendamiento
 
-A modern Next.js 15 application built with TypeScript and Tailwind CSS.
+Landing page profesional para **AHSE Tech**, una consultoría tecnológica enfocada en:
 
-## 🚀 Features
+* Desarrollo de software a medida
+* Soporte técnico y mantenimiento
+* Capacitación tecnológica
+* Asesoría digital para negocios
 
-- **Next.js 15** - Latest version with improved performance and features
-- **React 19** - Latest React version with enhanced capabilities
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+Incluye un sistema completo de **captación de leads + agendamiento de consultorías gratuitas**.
 
-## 🛠️ Installation
+---
 
-1. Install dependencies:
-  ```bash
-  npm install
-  # or
-  yarn install
-  ```
+## 🌐 Demo
 
-2. Start the development server:
-  ```bash
-  npm run dev
-  # or
-  yarn dev
-  ```
-3. Open [http://localhost:4028](http://localhost:4028) with your browser to see the result.
+👉 Próximamente / Deploy en producción
 
-## 📁 Project Structure
+---
+
+## 🧠 Descripción del Proyecto
+
+Este proyecto no es solo una landing page, es un **embudo de conversión completo** diseñado para:
+
+1. Captar atención (Hero dinámico)
+2. Mostrar servicios de alto valor
+3. Generar confianza (stats + propuesta clara)
+4. Convertir visitantes en leads (formulario + agenda)
+5. Automatizar seguimiento (emails + base de datos)
+
+---
+
+## ⚙️ Tecnologías Utilizadas
+
+### Frontend
+
+* Next.js 15 (App Router)
+* React 19
+* TypeScript
+* Tailwind CSS
+
+### Backend / Integraciones
+
+* Supabase (Base de datos y auth)
+* API Routes (Next.js)
+* Nodemailer (envío de correos) 
+* Resend (alternativa serverless para emails) 
+
+---
+
+## 🧩 Arquitectura
 
 ```
-nextjs/
-├── public/             # Static assets
-├── src/
-│   ├── app/            # App router components
-│   │   ├── layout.tsx  # Root layout component
-│   │   └── page.tsx    # Main page component
-│   ├── components/     # Reusable UI components
-│   ├── styles/         # Global styles and Tailwind configuration
-├── next.config.mjs     # Next.js configuration
-├── package.json        # Project dependencies and scripts
-├── postcss.config.js   # PostCSS configuration
-└── tailwind.config.js  # Tailwind CSS configuration
-
+src/
+├── app/
+│   ├── layout.tsx        # Layout global + SEO
+│   ├── page.tsx          # Página principal
+│   ├── api/              # Endpoints (emails, etc.)
+│
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── ui/               # Componentes reutilizables
+│
+├── sections/
+│   ├── HeroSection       # Atracción inicial
+│   ├── ServicesSection   # Oferta de valor
+│   ├── WhyUsSection      # Diferenciación
+│   ├── BookingSection    # Conversión (lead)
+│   ├── ContactSection    # Confianza + contacto
 ```
 
-## 🧩 Page Editing
+---
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Funcionalidades Clave
 
-## 🎨 Styling
+### 1. Hero dinámico (alta conversión)
 
-This project uses Tailwind CSS for styling with the following features:
-- Utility-first approach for rapid development
-- Custom theme configuration
-- Responsive design utilities
-- PostCSS and Autoprefixer integration
+* Slides automáticos con diferentes servicios
+* Copy orientado a negocio
+* Call to action directo
 
-## 📦 Available Scripts
+📄 Referencia: 
 
-- `npm run dev` - Start development server on port 4028
-- `npm run build` - Build the application for production
-- `npm run start` - Start the development server
-- `npm run serve` - Start the production server
-- `npm run lint` - Run ESLint to check code quality
-- `npm run lint:fix` - Fix ESLint issues automatically
-- `npm run format` - Format code with Prettier
+---
 
-## 📱 Deployment
+### 2. Sección de Servicios
 
-Build the application for production:
+* Diseño tipo "bento grid"
+* Servicios organizados visualmente
+* Enfoque en soluciones reales
 
-  ```bash
-  npm run build
-  ```
+📄 Referencia: 
 
-## 📚 Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Sección "Por qué elegirnos"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
+* Contadores animados (credibilidad)
+* Propuesta de valor clara
+* Diferenciadores:
 
-You can check out the [Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```txt
+✔ Diagnóstico gratis  
+✔ Atención personalizada  
+✔ Garantía  
+✔ Servicio a domicilio  
+```
 
-## 🙏 Acknowledgments
+---
 
-- Built with [Rocket.new](https://rocket.new)
-- Powered by Next.js and React
-- Styled with Tailwind CSS
+### 4. Sistema de Agendamiento (Core del negocio)
+
+Formulario con:
+
+* Validación en tiempo real
+* Selección de servicio
+* Fecha y hora preferida
+* Mensaje adicional
+
+📄 Referencia: 
+
+#### Flujo:
+
+```
+Usuario llena formulario
+        ↓
+Se valida información
+        ↓
+Se guarda en Supabase (tabla: cita)
+        ↓
+Se envía email automático
+        ↓
+Admin recibe lead listo para cerrar venta
+```
+
+---
+
+### 5. Sistema de Emails Automatizados
+
+* Confirmación al cliente
+* Notificación al administrador
+* Diseño profesional HTML
+
+📄 Referencia: 
+
+---
+
+### 6. Contacto y confianza
+
+* Teléfonos clicables
+* Cobertura geográfica
+* Horarios
+* Diseño visual con galería
+
+📄 Referencia: 
+
+---
+
+## 🎨 UI / UX
+
+* Diseño moderno y limpio
+* Animaciones con Intersection Observer
+* Scroll suave
+* Tipografías:
+
+  * Plus Jakarta Sans (display)
+  * DM Sans (body)
+
+📄 Referencia estilos: 
+
+---
+
+## 🔐 Variables de Entorno
+
+Crea un archivo `.env.local`:
+
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:4028
+
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+
+# SMTP (emails)
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM=
+ADMIN_EMAIL=
+```
+
+---
+
+## 🚀 Instalación
+
+```bash
+npm install
+npm run dev
+```
+
+Abrir en:
+
+```
+http://localhost:4028
+```
+
+---
+
+## 📦 Scripts Disponibles
+
+```bash
+npm run dev        # Desarrollo
+npm run build      # Build producción
+npm run serve      # Servidor producción
+npm run lint       # Linter
+npm run format     # Prettier
+```
+
+---
+
+## 📈 Enfoque de Negocio
+
+Este proyecto está diseñado para:
+
+* Generar clientes sin inversión en ads
+* Convertir tráfico en citas
+* Automatizar seguimiento
+* Escalar servicios digitales
+
+---
+
+## 🧠 Posibles Mejoras
+
+* Panel admin para ver citas
+* Integración con WhatsApp API
+* CRM básico
+* Pago en línea
+* Tracking de conversiones (Google Analytics / Meta Pixel)
+
+---
+
+## 👨‍💻 Autor
+
+**AHSE Tech**
+Consultoría tecnológica en Durango, México
+
+---
+
+## 📄 Licencia
+
+MIT
+
+---
+
+## 💡 Nota
+
+Este proyecto no es solo una landing…
+Es un **sistema de adquisición de clientes listo para negocio real**.
